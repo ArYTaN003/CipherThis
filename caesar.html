@@ -1,0 +1,92 @@
+﻿<html>
+<head>
+  <title>CT!-Caesar Cipher</title>
+<script>
+function openForm(){
+document.getElementById("myOverlay").style.display ="block"
+}
+
+function closeForm(){
+document.getElementById("myOverlay").style.display ="none"
+}
+function user(){
+alert("Thank You!")
+}
+function caesar(){
+t=document.d1.t1.value
+res=""
+for(i=0;i<t.length;i++){
+c=t[i]
+code=c.charCodeAt(0)
+if((code<=85 || (code<=117 && code>=97)) && c!=" "){
+encode=code+5
+res+=(String.fromCharCode(encode))
+}
+else if(c==" ")
+{res+=" "
+}
+else{encode=(code+5)-26
+res+=(String.fromCharCode(encode))
+}
+}
+document.d1.t2.value=res
+
+}
+</script>
+</head>
+<link rel="stylesheet" href="stylenew.css">
+<body>
+  <div class="logo">
+    <img src="websitelogo.png" alt="logo">
+  </div>
+    <div class="wrapper">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Ciphers
+            <ul>
+                <li><a href="Vigenere.html">Vigenère</a></li>
+                <li><a href="AtBash.html">AtBash</a></li>
+            </ul>
+           </li>
+          <li>Info
+            <ul>
+              <li><a href="caesarinfo.html">Caesar</a></li>
+              <li><a href="vigenereinfo.html">Vigenère</a></li>
+              
+              <li><a href="AtBashinfo.html">AtBash</a></li>
+            </ul>
+            
+          </li>
+            <li><a href="Aboutus.html">About us</a></li>
+        </ul>
+        <form name="signup">
+          <input type="button" name="sign up" value="Sign Up" onclick="openForm()">
+          </form>
+<div class="over" id="myOverlay">
+<div class="wraps">
+   <span class="closebtn" onclick="closeForm()" title="close">&#215</span> 
+   <div class="userlogo"><img src="login.png"></img></div>
+    <form>
+      <input type="text" placeholder="Enter First name"><br>
+      <input type="text" placeholder="Enter Last name"> <br>
+      <input type="text" placeholder="Enter Email or Mobile number"><br>
+      <input type="password" placeholder="Enter password"><br>
+      <input type="password" placeholder="Re-enter password" ><br>
+      <input type="submit" value="Sign up" onclick="user()"><br>     
+    </form>   
+    </div>
+ </div>     
+ </div> 
+  
+  <form name=d1>
+<p class="text">Here You can convert your text to a secret code based on caesar cipher.<br>
+Enter the text you want to encode below and click on convert.</p>
+<input type=text name=t1 placeholder="Enter your text here">
+<input type=text name=t2 placeholder="Result will be displayed here" disabled>
+<input type=button value=convert onclick=caesar()>
+</form>
+
+</body>
+<hr>
+<p class="show">All Copyrights claimed by ATD GROUP© 2020-∞</p>
+</html>

@@ -1,0 +1,71 @@
+﻿<html>
+    <head>
+        <title>CT!-Caesar Info</title>
+<script>
+function openForm(){
+document.getElementById("myOverlay").style.display ="block"
+}
+function closeForm(){
+document.getElementById("myOverlay").style.display ="none"
+}
+function user(){
+alert("Thank You!")
+}
+</script>
+    </head>
+    <link rel="stylesheet" href="stylenew.css">
+<body>
+  <div class="logo">
+    <img src="websitelogo.png" alt="logo">
+  </div>
+    <div class="wrapper">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Ciphers
+            <ul>
+                <li><a href="Vigenere.html">Vigenère</a></li>
+                <li><a href="caesar.html">Caesar</a></li>
+                <li><a href="AtBash.html">AtBash</a></li> 
+            </ul>
+           </li>
+          <li>Info
+            <ul>
+              <li><a href="vigenereinfo.html">Vigenère</a></li>
+              <li><a href="AtBashinfo.html">AtBash</a></li>
+              </ul>
+            
+          </li>
+            <li><a href="Aboutus.html">About us</a></li>
+        </ul>
+        <form name="signup">
+          <input type="button" name="sign up" value="Sign Up" onclick="openForm()">
+          </form>
+<div class="over" id="myOverlay">
+<div class="wraps">
+   <span class="closebtn" onclick="closeForm()" title="close">&#215</span> 
+   <div class="userlogo"><img src="login.png"></img></div>
+    <form name="signup">
+      <input type="text" placeholder="Enter First name" name=first><br>
+      <input type="text" placeholder="Enter Last name" name=last> <br>
+      <input type="text" placeholder="Enter Email or Mobile number"><br>
+      <input type="password" placeholder="Enter password"><br>
+      <input type="password" placeholder="Re-enter password" ><br>
+      <input type="submit" value="Sign up" onclick="user()"><br>     
+    </form>   
+    </div>
+ </div>
+      </div>  
+      <p class="cinfo">
+        The Caesar Cipher, also known as a <span>shift cipher</span>, is one of the oldest and simplest forms of encrypting a message. It is a type of substitution cipher where each letter in the original message (which in cryptography is called the <span>plaintext</span>) is replaced with a letter corresponding to a certain number of letters shifted up or down in the alphabet. For each letter of the alphabet, you would take its <span>position</span> in the alphabet, say 3 for the letter ‘C’, and shift it by the key number. If we had a key of +3, that ‘C’ would be shifted down to an ‘F’ – and that same process would be applied to every letter in the plaintext. In this way, a message that initially was quite readable, ends up in a form that cannot be understood at a simple glance. As unreadable as the resulting ciphertext may appear,<span>the Caesar Cipher is one of the weakest forms of encryption one can employ for the following reasons:</span>
+        <br>
+        <br>
+
+
+        1)The key space is very small. Using a<span>Brute force attack method</span>, one could easily try all (25) possible combinations to decrypt the message without initially knowing the key. 
+        <br><br>
+        2)<span>The structure of the original plaintext remains intact. This makes the encryption method vulnerable to frequency analysis</span> – by looking at how often certain characters or sequences of characters appear, one can discover patterns and potentially discover the key without having to perform a full brute force search.
+      </p>
+      <hr>
+      <p class="show">All Copyrights claimed by ATD GROUP© 2020-∞</p>
+</body>
+</html>

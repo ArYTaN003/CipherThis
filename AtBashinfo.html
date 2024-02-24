@@ -1,0 +1,85 @@
+﻿<html>
+    <head>
+        <title>CT!-AtBash Info</title>
+<script>
+
+function openForm(){
+document.getElementById("myOverlay").style.display ="block"
+}
+function closeForm(){
+document.getElementById("myOverlay").style.display ="none"
+}
+function user(){
+alert("Thank You!")
+}
+</script> 
+   </head>
+   <link rel="stylesheet" href="stylenew.css">
+<body>
+    <div class="logo">
+        <img src="websitelogo.png" alt="logo">
+      </div>
+    
+    <div class="wrapper">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Ciphers
+            <ul>
+               
+                <li><a href="caesar.html">Caesar</a></li>
+                <li><a href="Vigenere.html">Vigenère</a></li>
+                <li><a href="atBash.html">AtBash</a></li> 
+            </ul>
+           </li>
+          <li>Info
+            <ul>
+                <li><a href="caesarinfo.html">Caesar</a></li>
+              <li><a href="vigenereinfo.html">Vigenère</a></li>
+            
+              </ul>
+            
+          </li>
+            <li><a href="Aboutus.html">About us</a></li>
+        </ul>
+        <form name="signup">
+          <input type="button" name="sign up" value="Sign Up" onclick="openForm()">
+          </form>
+    <div class="over" id="myOverlay">
+<div class="wraps">
+   <span class="closebtn" onclick="closeForm()" title="close">&#215</span> 
+   <div class="userlogo"><img src="login.png"></img></div>
+    <form name="signup">
+      <input type="text" placeholder="Enter First name" name=first><br>
+      <input type="text" placeholder="Enter Last name" name=last> <br>
+      <input type="text" placeholder="Enter Email or Mobile number"><br>
+      <input type="password" placeholder="Enter password"><br>
+      <input type="password" placeholder="Re-enter password" ><br>
+      <input type="submit" value="Sign up" onclick="user()"><br>     
+    </form>   
+    </div>
+ </div>
+      </div>  
+      <p class="atinfo">
+        <span>Definition:</span> Atbash cipher is a substitution cipher with just one specific key where all the letters are reversed that is A to Z and Z to A. It was originally used to encode the Hebrew alphabets but it can be modified to encode any alphabet.
+        <br><br>
+<span>Relationship to Affine</span>: Atbash cipher can be thought of as a special case of Affine cipher with both the keys being 25, i.e, a = 25 & b = 25
+<br><br>
+    <img src="atbash.jpg" alt="key">
+    <br><br>
+    
+        <span>Algorithm</span>: The following key is used in the Atbash algorithm
+<br>
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+ZYXWVUTSRQPONMLKJIHGFEDCBA
+<br>  <br>
+<span>Encryption</span>
+<br>
+To encipher a message, find the letter you wish to encipher in the top row, then replace it with the letter in the bottom row.
+In the example below, we encipher the message ‘Aryan’. The first letter we wish to encipher is ‘A’, which is above ‘Z’, so the first ciphertext letter is ‘Z’. The next letter is ‘R’, which is above ‘I’, so that comes next. The whole message is enciphered as:
+<br><br>
+<span>ZIBZM</span>
+      </p>
+      <hr>
+      <p class="show">All Copyrights claimed by ATD GROUP© 2020-∞</p>
+</body>
+</html>

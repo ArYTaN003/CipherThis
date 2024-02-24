@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+
+<script>
+
+function openForm(){
+document.getElementById("myOverlay").style.display ="block"
+}
+function closeForm(){
+document.getElementById("myOverlay").style.display ="none"
+}
+function user(){
+alert("Thank You!")
+}
+</script>
+
+<title>CT!-Home</title>
+</head>
+<link rel="stylesheet" href="stylenew.css">
+<body>
+  <div class="logo">
+   <p><img src="websitelogo.png"></img> </p>
+  </div>
+  <div class="wrapper">
+    <ul>
+      <li>Ciphers
+        <ul>
+          <a href="caesar.html"><li>Caesar</li></a>
+          <a href="Vigenere.html"><li>Vigenere</li></a>
+          <a href="AtBash.html"><li>AtBash</li></a>
+        </ul>
+      
+      </li>
+      <li>Info
+        <ul>
+          <a href="caesarinfo.html"><li>Caesar</li></a>
+          <a href="vigenereinfo.html"><li>Vigenere</li></a>
+          <a href="AtBashinfo.html"><li>AtBash</li></a>
+        </ul></li>
+        <li><a href="Aboutus.html">About us</a></li>
+        <form name="signup1">
+          <input type="button" name="sign up" value="Sign Up" onclick="openForm()">
+          </form>
+    </ul>
+  </div>
+<div class="over" id="myOverlay">
+<div class="wraps">
+   <span class="closebtn" onclick="closeForm()" title="close">&#215</span> 
+   <div class="userlogo"><img src="login.png"></img></div>
+    <form name="signup">
+      <input type="text" placeholder="Enter First name" name=first><br>
+      <input type="text" placeholder="Enter Last name" name=last> <br>
+      <input type="text" placeholder="Enter Email or Mobile number"><br>
+      <input type="password" placeholder="Enter password"><br>
+      <input type="password" placeholder="Re-enter password" ><br>
+      <input type="submit" value="Sign up" onclick="user()"><br>     
+    </form>   
+   
+    </div>
+ </div>
+</div>
+     
+<div class="home-content">
+    
+    
+    <p id="greetings"> </p>
+    <script>
+        t=new Date()
+        h=t.getHours()
+        if(h>=4 && h<=11){document.getElementById("greetings").innerHTML=("Good morning")}
+        else if(h==12){document.getElementById("greetings").innerHTML=("Good noon")}
+        else if(h>=13 && h<=16){document.getElementById("greetings").innerHTML=("Good Afternoon")}
+        else if(h>=17 && h<23){document.getElementById("greetings").innerHTML=("Good Evening")}
+        else{document.getElementById("greetings").innerHTML=("Good night")}
+    </script>
+
+    <p>Welcome to our new website!!</p>
+    <p>Hope you guyz enjoy our cipherssss</p>
+    <p>browse through our tabs to test us!!</p>
+</div>
+  <hr>
+<p class="show">All Copyrights claimed by ATD GROUP© 2020-∞</p>
+</body>
+</html>

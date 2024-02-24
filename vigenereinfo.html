@@ -1,0 +1,84 @@
+﻿<html>
+    <head><title>CT!-Vigenere Info</title>
+<script>
+function openForm(){
+document.getElementById("myOverlay").style.display ="block"
+}
+function closeForm(){
+document.getElementById("myOverlay").style.display ="none"
+}
+function user(){
+alert("Thank You!")
+}
+</script>
+</head>
+    
+<link rel="stylesheet" href="stylenew.css">
+</html>
+<body>
+  <div class="logo">
+    <img src="websitelogo.png" alt="logo">
+  </div>
+    <div class="wrapper">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Ciphers
+            <ul>
+                <li><a href="caesar.html">Caesar</a></li>
+                <li><a href="Vigenere.html">Vigenère</a></li>
+                <li><a href="AtBash.html">AtBash</a></li> 
+            </ul>
+           </li>
+          <li>Info
+            <ul>
+              <li><a href="caesarinfo.html">Caesar</a></li>
+              <li><a href="AtBashinfo.html">AtBash</a></li>
+            </ul>
+          </li>
+            <li><a href="Aboutus.html">About us</a></li>
+        </ul>
+        <form name="signup">
+                <input type="button" name="sign up" value="Sign Up" onclick="openForm()">
+               </form>
+<div class="over" id="myOverlay">
+<div class="wraps">
+   <span class="closebtn" onclick="closeForm()" title="close">&#215</span> 
+   <div class="userlogo"><img src="login.png"></img></div>
+    <form name="signup">
+      <input type="text" placeholder="Enter First name" name=first><br>
+      <input type="text" placeholder="Enter Last name" name=last> <br>
+      <input type="text" placeholder="Enter Email or Mobile number"><br>
+      <input type="password" placeholder="Enter password"><br>
+      <input type="password" placeholder="Re-enter password" ><br>
+      <input type="submit" value="Sign up" onclick="user()"><br>     
+    </form>   
+    </div>
+ </div>
+      </div>  
+      <p class="vinfo">
+        Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution. A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets .The encryption of the original text is done using the Vigenère square or Vigenère table.
+
+        The table consists of the alphabets written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible Caesar Ciphers.
+        <br>
+        At different points in the encryption process, the cipher uses a different alphabet from one of the rows.
+        <br>
+        The alphabet used at each point depends on a repeating keyword.
+        <br><br>
+        <img src="table.jpg"></img>
+        <br><br>  
+        <span>Example</span>
+Input : Plaintext :   ARYAN
+ Keyword :  VIGENERE
+Output : Ciphertext :  VZEEA    
+For generating key, the given keyword is repeated
+in a circular manner until it matches the length of 
+the plain text.
+The keyword "VIGENERE" generates the key "VIGEN"
+<br><br>
+<span>Encryption</span>
+The first letter of the plaintext, A is paired with V, the first letter of the key. So use row A and column V of the Vigenère square, namely A. Similarly, for the second letter of the plaintext, the second letter of the key is used, the letter at row R and column I is Z. The rest of the plaintext is enciphered in a similar fashion.
+</p>
+</div>
+<hr>
+<p class="show">All Copyrights claimed by ATD GROUP© 2020-∞</p></body>
+</html>

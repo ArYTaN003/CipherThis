@@ -1,0 +1,90 @@
+﻿<html>
+<head>
+    <title>CT!-AtBash Cipher</title>
+<script>
+function openForm(){
+document.getElementById("myOverlay").style.display ="block"
+}
+
+function closeForm(){
+document.getElementById("myOverlay").style.display ="none"
+}
+function user(){
+alert("Thank You!")
+}
+function atbash(){
+txt=document.f1.t1.value
+if(parseInt(txt)==true){
+alert("Invalid value")}
+txt=txt.toUpperCase()
+var res=""
+reftable=[ "Z","Y","X","W","V", "U",  "T",  "S",  "R",  "Q", "P", "O",  "N", "M", "L","K","J", "I", "H", "G", "F",  "E", "D",  "C", "B", "A"] 
+for(i=0 ; i < (txt.length) ; i++){
+    letter=txt[i]
+    code=letter.charCodeAt(0)
+    if(letter==" "){
+              res+=" "
+              } 
+    else{
+
+        code=code-65
+        res+=reftable[code]
+        }
+                            }
+document.f1.t2.value=res
+}
+</script>
+</head>
+<link rel="stylesheet" href="stylenew.css">
+<body>
+    <div class="logo">
+        <img src="websitelogo.png" alt="logo">
+      </div>
+    <div class="wrapper">
+        <ul>
+          <li><a href="index.html">Home</a>
+          <li>Ciphers
+            <ul>
+                <li><a href="caesar.html">Caesar</a></li>
+                <li><a href="Vigenere.html">Vigenère</a></li>
+            </ul>
+           </a></li>
+          <li><a href="Aboutus.html">Info
+            <ul>
+              <li><a href="caesarinfo.html">Caesar</a></li>
+              <li><a href="vigenereinfo.html">Vigenère</a></li>
+              <li><a href="AtBashinfo.html">AtBash</a></li>
+            </ul>
+            </a>
+          </li>
+            <li><a href="Aboutus.html">About us</a></li>
+        </ul>
+        <form name="signup">
+          <input type="button" name="sign up" value="Sign Up" onclick="openForm()">
+          </form>
+<div class="over" id="myOverlay">
+<div class="wraps">
+   <span class="closebtn" onclick="closeForm()" title="close">&#215</span> 
+   <div class="userlogo"><img src="login.png"></img></div>
+    <form>
+      <input type="text" placeholder="Enter First name"><br>
+      <input type="text" placeholder="Enter Last name"> <br>
+      <input type="text" placeholder="Enter Email or Mobile number"><br>
+      <input type="password" placeholder="Enter password"><br>
+      <input type="password" placeholder="Re-enter password" ><br>
+      <input type="submit" value="Sign up" onclick="user()"><br>     
+    </form>   
+    </div>
+ </div>
+      </div>   
+      <p class="text">Here You can convert your text to a secret code based on AtBash cipher.<br>
+        Enter the text you want to encode below and click on convert.</p>
+<form name=f1>
+<input type=text name=t1 placeholder="enter your text">
+<input type=text name=t2 placeholder="result will be shown here" disabled>
+<input type=button value=convert onclick=atbash()>
+</form>
+<hr>
+      <p class="show">All Copyrights claimed by ATD GROUP© 2020-∞</p>
+</body>
+</html>
